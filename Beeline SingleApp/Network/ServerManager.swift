@@ -12,13 +12,13 @@ import Alamofire
 class ServerManager: HTTPRequestManager {
     static let shared = ServerManager()
     
-    func getCoins(completion: @escaping ([USDResult]) -> (), error: @escaping (String) -> ()) {
+    func getCoins(completion: @escaping (RawServerResponse) -> (), error: @escaping (String) -> ()) {
         self.get(endpoint: Constants.Network.EndPoint.ticker, completion: { (data) in
             //TODO
             do {
                 guard let  data = data else { return }
-                let result = try JSONDecoder().decode(QuotesResult.self, from: data)
-                completion(result.USD)
+                let result = try JSONDecoder().decode(RawServerResponse.self, from: data)
+                completion(result)
             }
             catch let errorMessage {
                 error(errorMessage.localizedDescription)

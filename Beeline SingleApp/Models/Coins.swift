@@ -8,22 +8,38 @@
 
 import Foundation
 
-class Coin: Decodable {
-    var data: [CoinResult] = []
+struct RawServerResponse : Decodable {
+    enum Keys : String, CodingKey {
+        case data = "data"
+    }
+    
+    let data : [String:Base]
 }
 
-class CoinResult: Decodable {
-    var id: Int?
-    var name: String?
-    var symbol: String?
-    var quotes: [QuotesResult] = []
+struct Base : Decodable {
+    enum CodingKeys : String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case symbol = "symbol"
+        case maxSupply = "max_supply"
+        case quotes = "quotes"
+    }
+    
+    let id : Int64
+    let name : String
+    let symbol : String
+    let maxSupply : Double?
+    let quotes : [String:Quote]
 }
 
-class QuotesResult: Decodable {
-    var USD: [USDResult] = []
-}
-
-class USDResult: Decodable {
-    var price: Double?
-    var percent_change_24h: Double?
+struct Quote : Decodable {
+    enum CodingKeys : String, CodingKey {
+        case price = "price"
+        case marketCap = "market_cap"
+        case percentChange24h = "percent_change_24h"
+    }
+    
+    let price :  Double
+    let marketCap : Double
+    let percentChange24h: Double
 }

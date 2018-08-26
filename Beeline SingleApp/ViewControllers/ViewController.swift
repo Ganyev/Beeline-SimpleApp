@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    var coinsArray: RawServerResponse?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        ServerManager.shared.getCoins(completion: setCoins, error: showErrorAllert)
+        
     }
 
-
+    func setCoins(coin: RawServerResponse) {
+        coinsArray = coin
+        self.tableView.reloadData()
+    }
+    
 }
 
