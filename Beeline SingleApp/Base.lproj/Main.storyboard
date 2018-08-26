@@ -22,13 +22,53 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="135" id="C6v-54-TMR" customClass="CoinsListCell" customModule="Beeline_SingleApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="135"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="coincell" rowHeight="52" id="C6v-54-TMR" customClass="CoinsListCell" customModule="Beeline_SingleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C6v-54-TMR" id="qfK-wl-xKK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="134.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-G1-dWf">
+                                                    <rect key="frame" x="15" y="11" width="195" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxH-eY-TYd">
+                                                    <rect key="frame" x="310" y="11" width="50" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="WA0-Wq-3Lf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvx-h2-BXq">
+                                                    <rect key="frame" x="225" y="11" width="70" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="BLS-lp-c3r"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WxH-eY-TYd" secondAttribute="trailing" constant="15" id="DGa-bU-WjJ"/>
+                                                <constraint firstItem="hvx-h2-BXq" firstAttribute="leading" secondItem="DDN-G1-dWf" secondAttribute="trailing" constant="15" id="DfO-M9-VR8"/>
+                                                <constraint firstItem="hvx-h2-BXq" firstAttribute="top" secondItem="qfK-wl-xKK" secondAttribute="top" constant="11" id="GJu-wC-EfG"/>
+                                                <constraint firstItem="WxH-eY-TYd" firstAttribute="top" secondItem="qfK-wl-xKK" secondAttribute="top" constant="11" id="MMg-Pv-0AP"/>
+                                                <constraint firstItem="DDN-G1-dWf" firstAttribute="top" secondItem="qfK-wl-xKK" secondAttribute="top" constant="11" id="SOy-lW-5FS"/>
+                                                <constraint firstItem="WxH-eY-TYd" firstAttribute="leading" secondItem="hvx-h2-BXq" secondAttribute="trailing" constant="15" id="VTf-NH-yyo"/>
+                                                <constraint firstItem="DDN-G1-dWf" firstAttribute="leading" secondItem="qfK-wl-xKK" secondAttribute="leading" constant="15" id="zGp-II-5Cy"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="hourLable" destination="WxH-eY-TYd" id="s0f-CR-OCM"/>
+                                            <outlet property="nameLabel" destination="DDN-G1-dWf" id="77I-Mc-UVY"/>
+                                            <outlet property="priceLable" destination="hvx-h2-BXq" id="21E-uT-Jbx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
