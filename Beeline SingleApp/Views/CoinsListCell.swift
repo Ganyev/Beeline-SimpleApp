@@ -21,8 +21,24 @@ class CoinsListCell: UITableViewCell {
             hourLable.text = "n/a"
             return
         }
-        priceLable.text = String(quote.price)
-        hourLable.text = String(quote.percentChange24h)
+        guard let price = quote.price else {
+            priceLable.text = "n/a"
+            return
+        }
+        guard let change = quote.percentChange24h else {
+             hourLable.text = "n/a"
+            return
+        }
+        priceLable.text = String(price)
+        hourLable.text = String(change)
+        
+        if change < 0 {
+            priceLable.textColor = UIColor.red
+            hourLable.textColor = UIColor.red
+        } else {
+            priceLable.textColor = UIColor.green
+            hourLable.textColor = UIColor.green
+        }
     }
     
     override func awakeFromNib() {

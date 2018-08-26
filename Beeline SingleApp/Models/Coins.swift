@@ -39,7 +39,7 @@ struct Quote : Decodable {
         case percentChange24h = "percent_change_24h"
     }
     
-    let price :  Double
-    let marketCap : Double
-    let percentChange24h: Double
+    let price :  Double?
+    let marketCap : Double?
+    let percentChange24h: Double?
 }

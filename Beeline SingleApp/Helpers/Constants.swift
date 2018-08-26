@@ -10,7 +10,9 @@ import Foundation
 struct Constants {
     struct Network {
         struct EndPoint {
-            static let ticker = "ticker/"
+            static func tickerByStart(by start: Int) -> String {
+                return "ticker/?start=\(start)&limit=10&sort=id"
+            }
             
         }
         

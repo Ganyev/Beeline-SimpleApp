@@ -13,20 +13,23 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     var coinsArray: [Base] = []
     var coinsArrayQuote: [Quote] = []
+    var page = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        ServerManager.shared.getCoins(completion: setCoins, error: showErrorAllert)
+        tableView.rowHeight = 80
+        loadCoins()
     }
 
-    func setCoins(tikers: [String : Base]) {
-        coinsArray = tikers.map({$0.value})
-        self.tableView.reloadData()
+    func loadCoins() {
+        ServerManager.shared.getCoins(start: page, completion: setCoins, error: showErrorAllert)
     }
+
     
-    func setCoinsQuote(qoute: [String : Quote]) {
-        coinsArrayQuote = qoute.map({$0.value})
+    func setCoins(tikers: [String : Base]) {
+        coinsArray.append(contentsOf: tikers.map({$0.value}))
         self.tableView.reloadData()
+        page = page + 10
     }
     
     
@@ -41,6 +44,12 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "coincell") as! CoinsListCell
         cell.setCoinsData(dataName: coinsArray[indexPath.row])
+        
+        let lastItem = coinsArray.count - 3
+        if indexPath.row == lastItem {
+            loadCoins()
+        }
+        
         return cell
     }
     
