@@ -18,6 +18,7 @@
 		9412C990213276DC00275C87 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C98F213276DC00275C87 /* ServerManager.swift */; };
 		9412C9922132773400275C87 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C9912132773400275C87 /* Coins.swift */; };
 		9412C994213278A500275C87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C993213278A500275C87 /* Constants.swift */; };
+		945C81E221327B93008E4FF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C81E121327B93008E4FF2 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		9412C98F213276DC00275C87 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		9412C9912132773400275C87 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		9412C993213278A500275C87 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		945C81E121327B93008E4FF2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D456138D478442A4A7A259DB /* Pods_Beeline_SingleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beeline_SingleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				9412C9772132756A00275C87 /* Main.storyboard */,
-				9412C98A2132766000275C87 /* Extensions */,
 				9412C9892132765600275C87 /* Helpers */,
 				9412C9882132765000275C87 /* Views */,
 				9412C9872132764400275C87 /* ViewControllers */,
@@ -132,15 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				9412C993213278A500275C87 /* Constants.swift */,
+				945C81E121327B93008E4FF2 /* Extensions.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		9412C98A2132766000275C87 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E48734B010AC7345AC43D1D9 /* Frameworks */ = {
@@ -268,6 +263,7 @@
 				9412C990213276DC00275C87 /* ServerManager.swift in Sources */,
 				9412C9762132756A00275C87 /* ViewController.swift in Sources */,
 				9412C9922132773400275C87 /* Coins.swift in Sources */,
+				945C81E221327B93008E4FF2 /* Extensions.swift in Sources */,
 				9412C9742132756A00275C87 /* AppDelegate.swift in Sources */,
 				9412C994213278A500275C87 /* Constants.swift in Sources */,
 				9412C98E213276C600275C87 /* HTTPStatusCode.swift in Sources */,
