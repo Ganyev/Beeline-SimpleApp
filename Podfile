@@ -8,5 +8,6 @@ target 'Beeline SingleApp' do
   # Pods for Beeline SingleApp
   pod 'Alamofire', '~> 4.7'
   pod 'Kingfisher'
+  pod 'RealmSwift'
 
 end
