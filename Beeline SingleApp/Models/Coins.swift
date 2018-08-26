@@ -23,6 +23,7 @@ struct Base : Decodable {
         case symbol = "symbol"
         case maxSupply = "max_supply"
         case quotes = "quotes"
+        case circulatingSupply = "circulating_supply"
     }
     
     let id : Int64
@@ -30,6 +31,7 @@ struct Base : Decodable {
     let symbol : String
     let maxSupply : Double?
     let quotes : [String:Quote]
+    let circulatingSupply: Double?
 }
 
 struct Quote : Decodable {

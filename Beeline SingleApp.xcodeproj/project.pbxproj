@@ -20,6 +20,7 @@
 		9412C994213278A500275C87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C993213278A500275C87 /* Constants.swift */; };
 		945C81E221327B93008E4FF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C81E121327B93008E4FF2 /* Extensions.swift */; };
 		945C81E42132A121008E4FF2 /* CoinsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C81E32132A121008E4FF2 /* CoinsListCell.swift */; };
+		945C81E62132EDDD008E4FF2 /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C81E52132EDDD008E4FF2 /* CoinDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		9412C993213278A500275C87 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		945C81E121327B93008E4FF2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		945C81E32132A121008E4FF2 /* CoinsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListCell.swift; sourceTree = "<group>"; };
+		945C81E52132EDDD008E4FF2 /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
 		D456138D478442A4A7A259DB /* Pods_Beeline_SingleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beeline_SingleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				9412C9752132756A00275C87 /* ViewController.swift */,
+				945C81E52132EDDD008E4FF2 /* CoinDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				9412C9762132756A00275C87 /* ViewController.swift in Sources */,
 				9412C9922132773400275C87 /* Coins.swift in Sources */,
 				945C81E42132A121008E4FF2 /* CoinsListCell.swift in Sources */,
+				945C81E62132EDDD008E4FF2 /* CoinDetailViewController.swift in Sources */,
 				945C81E221327B93008E4FF2 /* Extensions.swift in Sources */,
 				9412C9742132756A00275C87 /* AppDelegate.swift in Sources */,
 				9412C994213278A500275C87 /* Constants.swift in Sources */,

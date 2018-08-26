@@ -30,7 +30,7 @@ class CoinsListCell: UITableViewCell {
             return
         }
         priceLable.text = String(price)
-        hourLable.text = String(change)
+        hourLable.text = "\(String(change)) %"
         
         if change < 0 {
             priceLable.textColor = UIColor.red

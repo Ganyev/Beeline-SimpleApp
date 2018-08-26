@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var coinsArray: [Base] = []
@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.rowHeight = 80
         loadCoins()
     }
@@ -49,8 +50,14 @@ class ViewController: UIViewController, UITableViewDataSource {
         if indexPath.row == lastItem {
             loadCoins()
         }
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let st = UIStoryboard(name: "Main", bundle: nil)
+        let vc = st.instantiateViewController(withIdentifier: "CoinDetailViewController") as! CoinDetailViewController
+        vc.coinData = coinsArray[indexPath.row]
+        self.show(vc, sender: self)
     }
     
     
