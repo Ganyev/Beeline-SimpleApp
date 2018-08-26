@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CoinDetailViewController: UIViewController {
 
     @IBOutlet weak var market: UILabel!
     @IBOutlet weak var volume: UILabel!
     @IBOutlet weak var supply: UILabel!
+    let realm = try! Realm()
+    
     var coinData: Base?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +34,10 @@ class CoinDetailViewController: UIViewController {
         market.text = String(marketCap)
         volume.text = String(volume24)
         supply.text = String(cSupply)
-        
-       
     }
 
+    @IBAction func addFavorites() {
+        let object = DataCoins()
+    }
 
 }

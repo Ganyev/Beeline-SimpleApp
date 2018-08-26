@@ -21,6 +21,7 @@ class CoinsListCell: UITableViewCell {
             hourLable.text = "n/a"
             return
         }
+        
         guard let price = quote.price else {
             priceLable.text = "n/a"
             return
