@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DF70AA536BBF84BE7110C46 /* Pods_Beeline_SingleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D456138D478442A4A7A259DB /* Pods_Beeline_SingleApp.framework */; };
 		9412C9742132756A00275C87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C9732132756A00275C87 /* AppDelegate.swift */; };
 		9412C9762132756A00275C87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C9752132756A00275C87 /* ViewController.swift */; };
 		9412C9792132756A00275C87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9412C9772132756A00275C87 /* Main.storyboard */; };
 		9412C97B2132756B00275C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9412C97A2132756B00275C87 /* Assets.xcassets */; };
 		9412C97E2132756B00275C87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9412C97C2132756B00275C87 /* LaunchScreen.storyboard */; };
+		9412C98C2132767F00275C87 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C98B2132767F00275C87 /* HTTPRequestManager.swift */; };
+		9412C98E213276C600275C87 /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C98D213276C600275C87 /* HTTPStatusCode.swift */; };
+		9412C990213276DC00275C87 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C98F213276DC00275C87 /* ServerManager.swift */; };
+		9412C9922132773400275C87 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C9912132773400275C87 /* Coins.swift */; };
+		9412C994213278A500275C87 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412C993213278A500275C87 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		611D441EDDF18E066039B7B5 /* Pods-Beeline SingleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beeline SingleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beeline SingleApp/Pods-Beeline SingleApp.release.xcconfig"; sourceTree = "<group>"; };
+		7774D743F85110505E8396DC /* Pods-Beeline SingleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beeline SingleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beeline SingleApp/Pods-Beeline SingleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9412C9702132756A00275C87 /* Beeline SingleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beeline SingleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9412C9732132756A00275C87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9412C9752132756A00275C87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,12 @@
 		9412C97A2132756B00275C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9412C97D2132756B00275C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9412C97F2132756B00275C87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9412C98B2132767F00275C87 /* HTTPRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
+		9412C98D213276C600275C87 /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		9412C98F213276DC00275C87 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		9412C9912132773400275C87 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
+		9412C993213278A500275C87 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D456138D478442A4A7A259DB /* Pods_Beeline_SingleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beeline_SingleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF70AA536BBF84BE7110C46 /* Pods_Beeline_SingleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CC0B2A1C492D47AB53D8B6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7774D743F85110505E8396DC /* Pods-Beeline SingleApp.debug.xcconfig */,
+				611D441EDDF18E066039B7B5 /* Pods-Beeline SingleApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9412C9672132756A00275C87 = {
 			isa = PBXGroup;
 			children = (
 				9412C9722132756A00275C87 /* Beeline SingleApp */,
 				9412C9712132756A00275C87 /* Products */,
+				3CC0B2A1C492D47AB53D8B6E /* Pods */,
+				E48734B010AC7345AC43D1D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,75 @@
 		9412C9722132756A00275C87 /* Beeline SingleApp */ = {
 			isa = PBXGroup;
 			children = (
-				9412C9732132756A00275C87 /* AppDelegate.swift */,
-				9412C9752132756A00275C87 /* ViewController.swift */,
 				9412C9772132756A00275C87 /* Main.storyboard */,
+				9412C98A2132766000275C87 /* Extensions */,
+				9412C9892132765600275C87 /* Helpers */,
+				9412C9882132765000275C87 /* Views */,
+				9412C9872132764400275C87 /* ViewControllers */,
+				9412C9862132763C00275C87 /* Models */,
+				9412C9852132762F00275C87 /* Network */,
+				9412C9732132756A00275C87 /* AppDelegate.swift */,
 				9412C97A2132756B00275C87 /* Assets.xcassets */,
 				9412C97C2132756B00275C87 /* LaunchScreen.storyboard */,
 				9412C97F2132756B00275C87 /* Info.plist */,
 			);
 			path = "Beeline SingleApp";
+			sourceTree = "<group>";
+		};
+		9412C9852132762F00275C87 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9412C98B2132767F00275C87 /* HTTPRequestManager.swift */,
+				9412C98D213276C600275C87 /* HTTPStatusCode.swift */,
+				9412C98F213276DC00275C87 /* ServerManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9412C9862132763C00275C87 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9412C9912132773400275C87 /* Coins.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9412C9872132764400275C87 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9412C9752132756A00275C87 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9412C9882132765000275C87 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9412C9892132765600275C87 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9412C993213278A500275C87 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9412C98A2132766000275C87 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E48734B010AC7345AC43D1D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D456138D478442A4A7A259DB /* Pods_Beeline_SingleApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9412C9822132756B00275C87 /* Build configuration list for PBXNativeTarget "Beeline SingleApp" */;
 			buildPhases = (
+				A21E3B9E5D08153E1B08D7F4 /* [CP] Check Pods Manifest.lock */,
 				9412C96C2132756A00275C87 /* Sources */,
 				9412C96D2132756A00275C87 /* Frameworks */,
 				9412C96E2132756A00275C87 /* Resources */,
+				C2D967BF1EB46CBD34ADB0D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +219,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A21E3B9E5D08153E1B08D7F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Beeline SingleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2D967BF1EB46CBD34ADB0D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Beeline SingleApp/Pods-Beeline SingleApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Beeline SingleApp/Pods-Beeline SingleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9412C96C2132756A00275C87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9412C990213276DC00275C87 /* ServerManager.swift in Sources */,
 				9412C9762132756A00275C87 /* ViewController.swift in Sources */,
+				9412C9922132773400275C87 /* Coins.swift in Sources */,
 				9412C9742132756A00275C87 /* AppDelegate.swift in Sources */,
+				9412C994213278A500275C87 /* Constants.swift in Sources */,
+				9412C98E213276C600275C87 /* HTTPStatusCode.swift in Sources */,
+				9412C98C2132767F00275C87 /* HTTPRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +413,7 @@
 		};
 		9412C9832132756B00275C87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7774D743F85110505E8396DC /* Pods-Beeline SingleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +432,7 @@
 		};
 		9412C9842132756B00275C87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 611D441EDDF18E066039B7B5 /* Pods-Beeline SingleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
