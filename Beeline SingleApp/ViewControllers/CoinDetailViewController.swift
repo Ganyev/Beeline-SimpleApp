@@ -46,6 +46,12 @@ class CoinDetailViewController: UIViewController {
         item.name = (coinData?.name)!
         DBManager.sharedInstance.addData(object: item)
         self.dismiss(animated: true) { }
+        
+        let alert = UIAlertController(title: "Success!", message: "Added to Favorites", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+        
     }
 
 }

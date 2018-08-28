@@ -16,9 +16,7 @@ class DBManager {
     static let sharedInstance = DBManager()
     
     private init() {
-        
         database = try! Realm()
-        
     }
     
     func getDataFromDB() -> Results<Item> {
@@ -44,7 +42,6 @@ class DBManager {
     func deleteFromDb(object: Item) {
         
         try! database.write {
-            
             database.delete(object)
         }
     }
