@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import RealmSwift
 
-class FavouritesViewController: UIViewController, UITableViewDataSource {
+class FavouritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    let realm = try! Realm()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-       
+        tableView.delegate = self
+        tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,6 +40,18 @@ class FavouritesViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = item.name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let index = Int(indexPath.row)
+        let item = DBManager.sharedInstance.getDataFromDB()[index] as Item
+        let deleteAction = UITableViewRowAction(style: .default, title: "Delete") { _,_ in
+            try! self.realm.write {
+                self.realm.delete(item)
+            }
+            tableView.reloadData()
+        }
+        return [deleteAction]
     }
 
 }
