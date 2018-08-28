@@ -48,7 +48,7 @@ class CoinDetailViewController: UIViewController {
         self.dismiss(animated: true) { }
         
         let alert = UIAlertController(title: "Success!", message: "Added to Favorites", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .destructive, handler: nil)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
         
