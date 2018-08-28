@@ -15,7 +15,7 @@ class CoinDetailViewController: UIViewController {
     @IBOutlet weak var volume: UILabel!
     @IBOutlet weak var supply: UILabel!
     let realm = try! Realm()
-    
+    var currentItem:Item?
     var coinData: Base?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,15 @@ class CoinDetailViewController: UIViewController {
     }
 
     @IBAction func addFavorites() {
-        let object = DataCoins()
+        let item = Item()
+        
+        if(currentItem == nil) {
+            item.ID = DBManager.sharedInstance.getDataFromDB().count
+        }
+        
+        item.name = (coinData?.name)!
+        DBManager.sharedInstance.addData(object: item)
+        self.dismiss(animated: true) { }
     }
 
 }

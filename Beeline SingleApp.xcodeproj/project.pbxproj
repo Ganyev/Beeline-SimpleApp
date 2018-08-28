@@ -23,6 +23,7 @@
 		945C81E62132EDDD008E4FF2 /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C81E52132EDDD008E4FF2 /* CoinDetailViewController.swift */; };
 		945C81E82132FB46008E4FF2 /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C81E72132FB46008E4FF2 /* Realm.swift */; };
 		945C81EA2132FD27008E4FF2 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C81E92132FD27008E4FF2 /* FavouritesViewController.swift */; };
+		945C820E21356EE2008E4FF2 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945C820D21356EE2008E4FF2 /* DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		945C81E52132EDDD008E4FF2 /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
 		945C81E72132FB46008E4FF2 /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
 		945C81E92132FD27008E4FF2 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		945C820D21356EE2008E4FF2 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		D456138D478442A4A7A259DB /* Pods_Beeline_SingleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beeline_SingleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				9412C993213278A500275C87 /* Constants.swift */,
 				945C81E121327B93008E4FF2 /* Extensions.swift */,
 				945C81E72132FB46008E4FF2 /* Realm.swift */,
+				945C820D21356EE2008E4FF2 /* DBManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				945C81EA2132FD27008E4FF2 /* FavouritesViewController.swift in Sources */,
 				9412C990213276DC00275C87 /* ServerManager.swift in Sources */,
 				9412C9762132756A00275C87 /* ViewController.swift in Sources */,
+				945C820E21356EE2008E4FF2 /* DBManager.swift in Sources */,
 				9412C9922132773400275C87 /* Coins.swift in Sources */,
 				945C81E82132FB46008E4FF2 /* Realm.swift in Sources */,
 				945C81E42132A121008E4FF2 /* CoinsListCell.swift in Sources */,

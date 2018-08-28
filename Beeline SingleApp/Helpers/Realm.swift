@@ -9,8 +9,12 @@
 import Foundation
 import RealmSwift
 
-class DataCoins: Object {
-    @objc dynamic var market = ""
-    @objc dynamic var volume = ""
-    @objc dynamic var supply = ""
+class Item: Object {
+    @objc dynamic var name = ""
+    @objc dynamic var ID = -1
+
+    
+    override static func primaryKey() -> String? {
+        return "ID"
+    }
 }
